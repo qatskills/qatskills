@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div>{{ content | safe }}</div>
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

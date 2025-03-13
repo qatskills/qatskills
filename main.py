@@ -1,18 +1,32 @@
 from flask import Flask, render_template, send_file
-import nbformat
-import nbconvert
+import markdown
+import os
+#import nbformat
+#import nbconvert
 
 app = Flask(__name__)
 
 # Route: Homepage
 @app.route("/")
 def home():
-    return render_template("index.html")
+    posts = [f.replace(".md", "") for f in os.listdir("posts") if f.endswith(".md")]
+    return render_template("index.html", posts=posts)
 
-# Route: Blog Posts
+# Route: Render Blog Posts
 @app.route("/post/<post_name>")
 def blog_post(post_name):
-    return render_template(f"posts/{post_name}.html")
+    post_path = f"posts/{post_name}.md"
+
+    if not os.path.exists(post_path):
+        return "Post not found", 404
+
+    with open(post_path, "r") as f:
+        post_content = f.read()
+
+    # Convert Markdown to HTML
+    post_html = markdown.markdown(post_content)
+
+    return render_template("post.html", title=post_name, content=post_html)
 
 # Route: Render Jupyter Notebooks as HTML
 @app.route("/notebook/<notebook_name>")
