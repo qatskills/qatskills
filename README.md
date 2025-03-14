@@ -1,4 +1,4 @@
-# ⚛️ Qatskills: Quantum Algorithm Toolkit Skills  
+# ⚛️ Qatskills: Quantum Adoption Transition Skills 
 
 🚀 Welcome to **Qatskills**, a space dedicated to exploring **quantum computing, quantum algorithms, and hybrid quantum-classical solutions**.  
 
