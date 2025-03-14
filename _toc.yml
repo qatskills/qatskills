@@ -1,0 +1,8 @@
+format: jb-book
+root: README
+chapters:
+- file: content/intro
+- file: content/why_classical_engineers_care
+- file: content/reversible_logic_basics
+- file: content/qft_basics
+
