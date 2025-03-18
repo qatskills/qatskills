@@ -1,0 +1,9 @@
+title: "Qatskills: Quantum Adoption Transition Skills"
+author: "Your Name"
+html:
+  use_repository_button: false  # Hides "View on GitHub" if unnecessary
+  use_issues_button: false  # Hides GitHub issues link
+  use_edit_page_button: false  # Hides "edit on GitHub" links
+  home_page_in_navbar: true  # Adds "Home" in navbar for easy navigation
+  favicon: "images/favicon.ico"  # Optional: Add a custom favicon
+
